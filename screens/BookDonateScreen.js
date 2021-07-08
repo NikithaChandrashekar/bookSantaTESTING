@@ -19,7 +19,6 @@ export default class BookDonateScreen extends Component{
     this.requestRef = db.collection("requested_books")
     .onSnapshot((snapshot)=>{
       var requestedBooksList = snapshot.docs.map((doc) => doc.data())
-      console.log(requestedBooksList)
       this.setState({
         requestedBooksList : requestedBooksList
       });
